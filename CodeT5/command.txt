@@ -10,7 +10,7 @@ python run_exp.py --model_tag codet5_base --task siamese --sub_task none
 
 python run_exp.py --model_tag codet5_base --task sia_gen --sub_task none
 
-请参照运行命令与实际执行文件的对应关系，在执行上述命令之前，请修改相应文件为对应的文件名：
+Please refer to the corresponding relationship between the running command and the actual execution file. Before executing the above command, please modify the corresponding file to the corresponding file name:
 ”“”
 if [[ ${TASK} == 'multi_task' ]]; then
   RUN_FN=${WORKDIR}/run_multi_gen.py
@@ -27,6 +27,6 @@ else
   RUN_FN=${WORKDIR}/run_gen.py
 fi
 “”“
-比如我想生成用于训练语法判别器的数据时，我需要把run_gen_use_sia_model_gen_ast_loss_data.py文件重新命名为run_gen.py，同时注意命名冲突，
-然后在命令行执行“python run_exp.py --model_tag codet5_base --task gen_class --sub_task none”命令即可。
+For example, if I want to generate data for training a syntax discriminator, I need to rename the run_gen_use_sia_model_gen_ast_loss_data.py file to run_gen.py, minding naming conflicts.
+Then, I can execute the command "python run_exp.py --model_tag codet5_base --task gen_class --sub_task none" from the command line.
 
